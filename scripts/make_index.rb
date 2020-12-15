@@ -21,7 +21,7 @@ def make_index_for_directory(directory)
   children.each do |child|
     tr            = doc.at_css "table"
     tr.add_child "<tr>
-    <td><a href = #{ File.join(directory, child) }>Parent Directory</a></td><td>&nbsp;</td><td align=\"right\">  - </td><td>&nbsp;</td></tr>"
+    <td><a href = #{ File.join(child) }> #{ child } </a></td><td>&nbsp;</td><td align=\"right\">  - </td><td>&nbsp;</td></tr>"
   end
   doc.write_to(fh)
 end
