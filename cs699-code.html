@@ -1,0 +1,115 @@
+<html>
+<head>
+	<title>EXTREME-SCALE QUANTUM SIMULATIONS</title>
+</head>
+<body>
+
+<h2>
+<center>EXTREME-SCALE QUANTUM SIMULATIONS</center>
+</h2>
+
+<center>
+<table border="1">
+	<tr>
+		<th>&nbsp;&nbsp;&nbsp;&nbsp;<a href="cs699.html">Home</a>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+		<th>&nbsp;&nbsp;<a href="cs699-syllabus.html">Syllabus</a>&nbsp;&nbsp;</th>
+		<th>&nbsp;&nbsp;<a href="cs699-lecture.html">Lectures</a>&nbsp;&nbsp;</th>
+		<th>&nbsp;<a href="cs699-papers.html">Readings</a>&nbsp;</th>
+		<th><a href="cs699-assgn.html">Assignments</a></th>
+		<th>&nbsp;&nbsp;<a href="cs699-code.html">Codes</a>&nbsp;&nbsp;</th>
+		<th>&nbsp;&nbsp;&nbsp;&nbsp;<a href="cs699-link.html">Links</a>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+	</tr>
+</table>
+</center>
+
+<center><h3>Software: QXMD</h3></center>
+
+<h4>Introduction</h4>
+
+QXMD is a Quantum Molecular Dynamics (QMD) simulation software with various eXtensions.
+QMD follows the trajectories of all atoms while computing interatomic forces quantum mechanically
+in the framework of density functional theory (DFT) 
+[<a href="https://journals.aps.org/pr/abstract/10.1103/PhysRev.136.B864">P. Hohenberg & W. Kohn, <i>Phys. Rev.</i> <b>136</b>, B864 (1964)</a>;
+ <a href="https://journals.aps.org/pr/abstract/10.1103/PhysRev.140.A1133">W. Kohn & L. J. Sham, <i>Phys. Rev.</i> <b>140</b>, A1133 (1965)</a>].
+The QXMD software has been developed by Fuyuki Shimojo since 1994 [1]. Since 1999, various extensions have been developed in collaboration with
+Rajiv Kalia, Aiichiro Nakano and Priya Vashishta [2].
+<br><br>
+The basic QXMD code is based on a plane-wave basis to represent electronic wave functions and pseudopotential (PP) methods to describe electron-ion interaction.
+Supported PPs include norm-conserving PP 
+[<a href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.43.1993">N. Troullier & J. L. Martins, <i>Phys. Rev. B</i> <b>41</b>, 1993 (1991)</a>] 
+and ultrasoft PP 
+[<a href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.41.7892">D. Vanderbilt, <i>Phys. Rev. B</i> <b>41</b>, 7892 (1991)</a>], 
+as well as an all-electron projector augmented-wave (PAW) method 
+[<a href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.50.17953">P. E. Blochl, <i>Phys Rev B</i> <b>50</b>, 17953 (1994)</a>].
+Electron-electron interaction beyond the mean-field Hartree approximation is included using various exchange-correlation functionals,
+with and without spin polarization:
+generalized gradient approximation (GGA) 
+[<a href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.77.3865">J. P. Perdew, K. Burke & M. Ernzerhof, <i>Phys. Rev. Lett.</i> <b>77</b>, 3865 (1996)</a>],
+DFT+U method for transition metals 
+[<a href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.52.R5467">A. I. Liechtenstein, V. I. Anisimov & J. Zaanen, <i>Phys. Rev. B</i> <b>52</b>, R5467 (1995)</a>],
+van der Waals (vDW) functional for molecular crystals and layered materials 
+[<a href="http://onlinelibrary.wiley.com/doi/10.1002/jcc.20078/abstract">S. Grimme, <i>J. Comput. Chem.</i> <b>25</b>, 1463 (2004)</a>],
+nonlocal correlation functional 
+[<a href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.92.246401">M. Dion et al., <i>Phys. Rev. Lett.</i> <b>92</b>, 246401 (2004)</a>],
+and range-separated exact-exchange functional 
+[<a href="http://aip.scitation.org/doi/10.1063/1.1564060">J. Heyd, G. E. Scuseria & M. Ernzerhof, <i>J. Chem. Phys.</i> <b>118</b>, 8207 (2003)</a>].
+<br><br>
+Various extensions included in the QXMD code are described in Ref. [2]:
+<ul>
+
+<li>	Linear-scaling DFT algorithms [3,4,5]
+<li>	Scalable algorithms on massively parallel computers [6,7]
+<li>	Nonadiabatic quantum molecular dynamics (NAQMD) to describe excitation dynamics [8]
+<li>	Omni-directional multiscale shock technique (OD-MSST) to study anisotropic shock response of materials [9]
+</ul>
+
+<h4>References</h4>
+
+1. "First-principles molecular-dynamics simulation of expanded liquid rubidium,"
+   F. Shimojo, Y. Zempo, K. Hoshino & M. Watabe,
+   <a href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.52.9320"><i> Phys. Rev. B</i>, <b>52</b>, 9320 (1995)</a><br>
+2. "A divide-conquer-recombine algorithmic paradigm for large spatiotemporal quantum molecular dynamics simulations,"
+   F. Shimojo, S. Hattori, R. K. Kalia, M. Kunaseth, W. Mou, A. Nakano, K. Nomura, S. Ohmura, P. Rajak, K. Shimamura & P. Vashishta
+   <a href="http://aip.scitation.org/doi/abs/10.1063/1.4869342?journalCode=jcp"><i>J. Chem. Phys.</i> <b>140</b>, 18A529 (2014)</a><br>
+3. "Linear-scaling density-functional-theory calculations of electronic structure based on real-space grids: design, analysis, and scalability test of parallel algorithms,"
+   F. Shimojo, R. K. Kalia, A. Nakano & P. Vashishta
+   <a href="https://www.sciencedirect.com/science/article/pii/S0010465501002478"><i>Comput. Phys. Commun.</i> <b>140</b>, 303 (2001)</a><br>
+4. "Embedded divide-and-conquer algorithm on hierarchical real-space grids: parallel molecular dynamics simulation based on linear-scaling density functional theory,"
+   F. Shimojo, R. K. Kalia, A. Nakano & P. Vashishta,
+   <a href="http://www.sciencedirect.com/science/article/pii/S0010465505000688"><i>Comput. Phys. Commun.</i> <b>167</b>, 151 (2005)</a><br>
+5. "Divide-and-conquer density functional theory on hierarchical real-space grids: parallel implementation and applications,"
+   F. Shimojo, R. K. Kalia, A. Nakano & P. Vashishta,
+   <a href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.77.085103"><i>Phys. Rev.</i> <b>B</b> 77, 085103 (2008)</a><br>
+6. "Scalable atomistic simulation algorithms for materials research,"
+   A. Nakano, R. K. Kalia, P. Vashishta, T. J. Campbell, S. Ogata, F. Shimojo & S. Saini
+   <a href="http://ieeexplore.ieee.org/document/1592786/"><i>Proc. Supercomputing, SC01</i> (ACM/IEEE, 2001)</a><br>
+7. "Metascalable quantum molecular dynamics simulations of hydrogen-on-demand,"
+   K. Nomura, R. K. Kalia, A. Nakano, P. Vashishta, K. Shimamura, F. Shimojo, M. Kunaseth, P. C. Messina& N. A. Romero
+   <a href="http://ieeexplore.ieee.org/document/7013041/"><i>Proc. Supercomputing, SC14</i> (IEEE/ACM, 2014)</a><br>
+8. "Large nonadiabatic quantum molecular dynamics simulations on parallel computer,"
+   F. Shimojo, S. Ohmura, W. Mou, R. K. Kalia, A. Nakano & P. Vashishta
+   <a href="https://www.sciencedirect.com/science/article/pii/S0010465512002548"><i>Comput. Phys. Commun.</i> <b>184</b>, 1 (2013)</a><br>
+9."Crystalline anisotropy of shock-induced phenomena: omni-directional multiscale shock technique,"
+   K. Shimamura, M. Misawa, S. Ohmura, F. Shimojo, R. K. Kalia, A. Nakano & P. Vashishta
+   <a href="http://aip.scitation.org/doi/abs/10.1063/1.4942191?journalCode=apl"><i>Appl. Phys. Lett.</i> <b>108</b>, 071901 (2016)</a><br>
+
+<h4>Software</h4>
+
+<ul>
+
+<li>	<a href="https://github.com/USCCACS/QXMD_Course">QXMD-course GitHub repository</a>
+<li>	<a href="https://magics.usc.edu/qxmd/">MAGICS QXMD software site</a>
+
+</ul>
+
+<h4>Links</h4>
+
+<ul>
+
+<li>	<a href="https://swcarpentry.github.io/git-novice/">Git lesson at Software Carpentry</a>
+<li>	<a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">Markdown cheat sheet</a>
+
+</ul>
+
+</body>
+</html>

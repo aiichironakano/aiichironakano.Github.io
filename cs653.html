@@ -1,0 +1,177 @@
+<html>
+<head>
+	<title> HIGH PERFORMANCE COMPUTING AND SIMULATIONS </title>
+</head>
+<body>
+
+<h2>
+<center> HIGH PERFORMANCE COMPUTING AND SIMULATIONS (Fall 2019)</center>
+</h2>
+
+<center>
+<table border="1">
+	<tr>
+		<th>&nbsp;&nbsp;&nbsp;&nbsp;<a href="cs653.html">Home</a>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+		<th>&nbsp;&nbsp;<a href="cs653-syllabus.html">Syllabus</a>&nbsp;&nbsp;</th>
+		<th>&nbsp;&nbsp;<a href="cs653-lecture.html">Lectures</a>&nbsp;&nbsp;</th>
+		<th>&nbsp;<a href="cs653-papers.html">Readings</a>&nbsp;</th>
+		<th><a href="cs653-assgn.html">Assignments</a></th>
+		<th>&nbsp;&nbsp;<a href="cs653-code.html">Codes</a>&nbsp;&nbsp;</th>
+		<th>&nbsp;&nbsp;&nbsp;&nbsp;<a href="cs653-link.html">Links</a>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+	</tr>
+</table>
+</center>
+<p>
+
+<b>Course Number:</b> CSCI 653<br>
+<b>Section:</b> 30398D (lecture), 30399R (discussion)<br>
+<b>Instructor:</b>
+<A HREF="http://cacs.usc.edu/nakano.php">Aiichiro Nakano</A>;
+office: VHE 610; phone: (213) 821-2657; email: anakano@usc.edu<br>
+<b>Lecture:</b> 3:30-4:50pm M W, LVL 13<br>
+<b>Discussion:</b> 3:30-4:20pm F, VPD 106<br>
+<b>Office Hours:</b> 4:30-5:20pm F, VHE 610<br>
+<b>Prerequisites:</b>
+(1) <a href="http://cacs.usc.edu/education/cs596.html">CSCI 596 (Scientific Computing and Visualization)</a>; or
+(2) basic knowledge of numerical methods (CSCI 501, <a href="http://cacs.usc.edu/education/phys516.html">PHYS 516</a> or equivalent) + 
+parallel computing (<a href="cs653/EE451-Prasanna.pdf">EE 451</a> or equivalent) +
+3D graphics (CSCI 580 or equivalent).<br>
+<b>Textbooks:</b><br>
+D. Frenkel and B. Smit, 
+	<a href="http://www.sciencedirect.com/science/book/9780122673511">
+	<i>Understanding Molecular Simulation: From Algorithms to Applications, 2nd Ed.</i></a>
+	(Academic Press, 2001)--recommended<br>
+A. Grama, A. Gupta, G. Karypis, and V. Kumar,
+	<a href="http://www-users.cs.umn.edu/~karypis/parbook/">
+	<i>Introduction to Parallel Computing, 2nd Ed.</i></a>
+	(Addison-Wesley, 2003)--recommended<br>
+D. L. Chopp,
+	<a href="http://bookstore.siam.org/se30/">
+	<i>Introduction to High Performance Scientific Computing</i></a>
+	(SIAM, 2019) -- recommended<br>
+W. H. Press, B. P. Flannery, S. A. Teukolsky, and W. T. Vetterling,
+	<a href="http://numerical.recipes/">
+	<i>Numerical Recipes, 3rd Ed.</i> (Cambridge Univ. Press, 2007)
+	</a>
+	--books available online 
+	(<a href="http://www.nrbook.com/a/bookcpdf.php">C</a> and
+	<a href="http://www.nrbook.com/a/bookf90pdf.php">Fortran 90</a>)
+<p>
+
+<b> Course Description </b><br><br>
+Provide students with advanced techniques that are common to high performance computer simulations 
+in science and engineering.  Scalable algorithms for both deterministic and stochastic simulations 
+of particles and continuum will be implemented on massively parallel and 
+distributed computing platforms, and the simulation datasets will be visualized and analyzed 
+in immersive and interactive virtual environment. For details, please see
+<a href="cs653/CSCI653-F19.pdf">course information sheet</a>.<p>
+
+<p ALIGN="CENTER"><img SRC="SF.jpg" WIDTH="432" HEIGHT="288"></p>
+<p ALIGN="CENTER">Visualization of divide-conquer-recombine based simulation of
+photoexcitated electron-hole pairs in organic solar cells.</p>
+
+<h4>Announcements</h4>
+<ul>
+<li>	8/26 (M): Class begins--discussion of logistics.
+<li>	8/28 (W): Introductory lecture;
+		see <a href="https://web.cvent.com/event/b03cf98d-d350-4f66-805a-1a19f03bdcf8/summary">
+		AI for science townhall</a> (<a href="cs653/AItownhall-ANL.pdf">agenda of Argonne townhall</a>) and
+		UCLA-IPAM program on <a href="https://www.ipam.ucla.edu/programs/long-programs/machine-learning-for-physics-and-the-physics-of-learning/">
+		Machine learning for physics and the physics of learning</a>.
+<li>	8/29 (Th): ACM tech talk on <a href="https://event.on24.com/eventRegistration/EventLobbyServlet?target=lobby20.jsp&eventid=2067369&sessionid=1&partnerref=bull1&key=3EFAF0D6C86835B2132233345694A92B&eventuserid=250123157">
+		A new golden age for computer architecture</a> by Prof. David Patterson (UC Berkeley).
+<li>	8/30 (F): Discussion of HW1.
+<li>	9/2 (M): Labor day, no class.
+<li>	9/3 (T): <a href="https://piazza.com/class/k04ct2271l32u?cid=1">Piazza forum</a>
+		was created; please use it to discuss with your classmates.
+<li>	9/4/ (W): Lecture on molecular dynamics (MD).
+<li>	9/6 (F): Seminar on <a href="http://physics.usc.edu/%7Eshaas/cmseminar.html">
+		Population annealing: massively parallel Monte Carlo simulations and efficient estimation of the density of states</a>
+		by Dr. Lev Barash (HSE Tikhonov Moscow Institute of Electronics and Mathematics).
+<li>	9/6 (F): See <a href="cs653/HR001119S0082.pdf">DARPA FastNIC program</a>: 
+		What scientific breakthroughs will be enabled by 100x increase in network speed?
+<li>	9/6 (F): Discussion of HW1--<a href="cs653/result01.html">partial results</a>;
+		<a href="https://github.com/USCCACS/QXMD">QXMD GitHub repository<a>
+		and "quantum computational science" by Lindsay Bassman.
+<li>	9/9 (M): Lecture on spatiotemporal multiresolution MD.
+<li>	9/9 (M): US Department of Energy (DOE) established <a href="https://www.energy.gov/articles/secretary-perry-stands-office-artificial-intelligence-and-technology">
+		Artificial Intelligence and Technology Office (AITO)</a>.
+<li>	9/9 (M): See the level of mathematics used in <a href="https://www.deeplearningbook.org/">
+		Deep Learning</a>, I. Goodfellow, et al. (MIT Press, 2016).
+<li>	9/11 (W): Lecture on fast multipole method (FMM) algorithm and code; discussion of HW2.
+<li>	9/13 (F): 3:30 pm: getting started with parallel computing in VPD 106;
+		4:30 pm: discussion session for HW 2 in VHE 610.
+<li>	9/16 (M): Lecture on parallel MD.
+<li>	9/17 (T): NVIDIA Webinar on <a href="https://event.on24.com/eventRegistration/EventLobbyServlet?target=reg20.jsp&referrer=https%3A%2F%2Fhome.nvidia.com%2Fjira%2Fservicedesk%2Fcustomer%2Fportal%2F20%2FDGEM-228&eventid=2069143&sessionid=1&key=F66D8DED4AF88BD0A21EEE8BEFFC3380&regTag=&sourcepage=register">
+		Accelerating quantum chemistry simulations with AI</a> at 11 am.
+<li>	9/18 (W): Lecture on divide-&-conquer (DC) parallelization.
+<li>	9/20 (F): Self-study: running MPI programs at the Center for High-Performance Computing (HPC)--
+		no classroom meeting due to the football game.
+<li>	9/23 (M): Lecture and team building on "quantum parallel scientific computing: 
+		quantum programming, quantum compilation and
+		quantum circuit" by Lindsay Bassman.
+<li>	9/25 (W): Hypercube-quicksort programming using MPI.
+<li>	9/26 (Th): 4:30 pm: special discussion session for HW 3 & office hour in VHE 610.
+<li>	9/27 (F): Discussion of "your" papers.
+<li>	9/27 (F): See <a href="https://www.ipam.ucla.edu/programs/workshops/workshop-i-from-passive-to-active-generative-and-reinforcement-learning-with-physics/?tab=schedule">
+		lecture slides</a> at the IPAM workshop on "From Passive to Active: Generative and Reinforcement Learning with Physics".
+<li>	9/30 (M): Lecture on hybrid MPI+OpenMP parallel MD.
+<li>	10/1(T)-2(W): XSEDE training on <a href="https://www.psc.edu/current-workshop">
+		big data: analytics & machine learning</a> at USC; please register 
+		<a href="https://portal.xsede.org/web/xup/course-calendar">here</a>.
+<li>	10/2 (W): Lecture on parallel quantum dynamics (QD), fast Fourier transform (FFT) and multiresolution methods (wavelets).
+<li>	10/4 (F): Logistics of HW4 (wavelet image compression).
+<li>	10/7 (M): Parallel (asynchronous) MPI+OpenMP programming of wavelet image compression.
+<li>	10/9 (W): Lecture on advanced multiresolution methods.
+<li>	10/11 (F): Research topics on MD + paper-topic discussion.
+<li>	10/11 (F): 4:30 pm: discussion session for HW 4 in VHE 610.
+<li>	10/14 (M): Lecture on multiscale simulations.
+<li>	10/16 (W): Lecture on load balancing, including O(N) spectral method based on Krylov-subspace iteration.
+<li>	10/18 (F): Fall recess, no class.
+<li>	10/21 (M): Lecture on optimizing parallel MD.
+<li>	10/23 (W): Lecture on graphics processing unit (GPU) programming using CUDA and hybrid MPI+OpenMP+CUDA programming.
+<li>	10/25 (F): Parallel QD programming using MPI.
+<li>	10/28 (M): Triple-decker MPI+OpenMP+CUDA QD programming (1).
+<li>	10/28 (M): Seminar on <a href="cs653/DanielSank102819.png">
+		The road to quantum supremacy</a> by Dr. Daniel Sank (Google) at 4:15 pm in MCB 101.
+<li>	10/30 (W): Triple-decker MPI+OpenMP+CUDA QD programming (2); paper discussion.
+<li>	10/31 (Th): Seminar on <a href="https://www.cs.usc.edu/event-details/?event=18109">
+		Robots in space: how AI and machine learning are revolutionizing space exploration</a>
+		by Dr. Masahiro Ono (JPL) at 2 pm in SAL 101.
+<li>	11/1 (F): Final-project logistics; paper discussion.
+<li>	11/1 (F): 4:30 pm: discussion session for HW 5 in VHE 610.
+<li>	11/1 (F): See <a href="cs653/Service-AI4Science-Science19.pdf">
+		DOE readies multibillion-dollar AI push</a> in <i>Sience</i>, October 31 issue.
+<li>	11/4 (M): HPC tour, please sign in at the reception of the 3434 Grand building at 3:45 pm sharp;
+		see <a href="http://itservices.usc.edu/contact/location">access to 3434 Grand</a>. 
+		Also, <b>do not forget to bring your student photo ID</b>, which is required to enter the building for security;
+		this is jointly with MASC 575 (basics of atomistic simulations of materials) students and will be
+		led by Prof. Ken-ichi Nomura.
+<li>	11/6 (W): scientific virtual reality (VR) demo by Ankit Mishra;
+		see B. Horton et al., <a href="cs653/Horton-GEARS-SWX19.pdf">Game-Engine-Assisted Research platform for Scientific computing (GEARS) in virtual reality</a>,
+		<i>SoftwareX</i> <b>9</b>, 112 (2019) and
+		A. Mishra et al, <a href="cs653/Mishra-MAGICSSW-CSC19.pdf">Materials genome software framework: scalable parallel simulation, virtual reality visualization and machine learning</a>,
+		in <i>Proc. CSC'19</i>, p. 125.
+<li>	11/8 (F): Lecture on OpenMP target offload; paper discussion.
+<li>	11/8 (F): 4:30 pm: discussion session for HW 5 in VHE 610.
+<li>	11/11 (M): Lecture on scientific Grid computing; paper discussion.
+<li>	11/13 (W): Lecture on scientific data mining and machine learning; paper discussion.
+<li>	11/14 (Th): Seminar on <a href="cs653/Di-1114.pdf">
+		Energy-efficient integrated photonics for high-performance computing and beyond</a>
+		by Dr. Di Liang (Hewlett Packard) at 11:00 am in EEB 248.
+<li>	11/15 (F): Final-project and paper discussions.
+<li>	11/18 (M): Lecture on Monte Carlo (MC); paper discussion.
+<li>	11/20 (W): Lecture on scientific visualization; paper discussion.
+<li>	11/22 (F): (1) paper discussions conclude; (2) final-project topic due.
+<li>	11/25 (M): Special lectures: (1) Dr. Manaschai Kunaseth (ThaiSC) on
+		scalable parallel MD and news from SC19; and 
+		(2) Dr. Pankaj Rajak (Argonne) on simulation + learning.
+<li>	11/27 (W), 11/29 (F): Thanksgiving holidays, no class.
+<li>	12/2 (M): Final GitHub-repository preparation (no regular class); 
+		fill at least the name (team), title & abstract.
+<li>	12/4 (W), 12/6 (F): Final project presentation using the repository.
+<li>	12/18 (W): Final project report (GitHub repository) due.
+</ul>
+
+</body>
+</html>
