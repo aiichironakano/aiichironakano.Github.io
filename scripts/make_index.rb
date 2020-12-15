@@ -20,7 +20,8 @@ def make_index(directory, children)
   children.each do |child|
     tr            = doc.at_css "table"
     tr.add_child "<tr>
-    <td><a href = #{ File.join(child) }> #{ child } </a></td><td>&nbsp;</td><td align=\"right\">  - </td><td>&nbsp;</td></tr>"
+    <td><a href = #{ File.join(child) }> #{ child } </a></td>
+    <td> #{ File.new(File.join(directory, child)).mtime }</td><td align=\"right\">  - </td><td>&nbsp;</td></tr>"
   end
   puts doc.to_html
   doc.write_to(fh)
