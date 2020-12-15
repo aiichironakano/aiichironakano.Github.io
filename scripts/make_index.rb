@@ -1,11 +1,8 @@
 require 'nokogiri'
 
 courses = ["cs653/src/", "phys516/src/", "cs596/src/"]
-@content_children_map = {}
 
-def make_index_for_directory(directory)
-  children = @content_children_map[directory]
-
+def make_index(directory, children)
   fh = File.open(File.join(directory,"index.html"), "w")
   doc =  Nokogiri::HTML::Document.parse <<-EOHTML
   <h1>Index of #{ directory } </h1>
@@ -14,6 +11,7 @@ def make_index_for_directory(directory)
   </table>
   EOHTML
   p doc.to_html
+  puts "children of this directory are #{children}"
   body = doc.at_css "body"
   body.add_previous_sibling "<head>
   <title>Index of #{ directory } </title></head>"
@@ -23,23 +21,27 @@ def make_index_for_directory(directory)
     tr.add_child "<tr>
     <td><a href = #{ File.join(child) }> #{ child } </a></td><td>&nbsp;</td><td align=\"right\">  - </td><td>&nbsp;</td></tr>"
   end
+  puts doc.to_html
   doc.write_to(fh)
+  puts "wrote to " + File.join(directory,"index.html")
+  deeper_directories = children.map {|entry| File.join(directory, entry)}.select {|entry| File.directory? entry}
+  find_contents(deeper_directories)
 end
 
-def make_index(contents)
-  @content_children_map = {}
-  contents.each do |content| 
-    children          = Dir.entries(content).select do |entry|
-      !(entry == '.' || entry == '..' ) and !(entry == 'index.html')       
+def find_contents(directories)
+  directory_children_map = {}
+  directories.each do |directory| 
+    children          = Dir.entries(directory).select do |entry|
+      !(entry == '.' || entry == '..' ) and !(entry == 'index.html')
     end
-    @content_children_map[content] = children   
+    directory_children_map[directory] = children   
   end
-  p @content_children_map
-  @content_children_map.each_key do |content|
-    make_index_for_directory(content)
+  p directory_children_map
+  directory_children_map.each_pair do |directory, children|
+    make_index(directory, children)
   end
 end
 
-make_index(courses)
+find_contents(courses)
 
 
