@@ -26,7 +26,7 @@ def make_index(directory, children)
     <td align=\"right\">  ${ f.size } </td>
     <td> #{ f.path }</td></tr>"
   end
-  # puts doc.to_html
+  puts doc.to_html
   doc.write_to(fh)
   puts "Generated index in " + File.join(directory,"index.html")  
 end
