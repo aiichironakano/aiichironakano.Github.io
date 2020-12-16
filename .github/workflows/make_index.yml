@@ -39,6 +39,3 @@ jobs:
        timestamp=$(date -u)
        git commit -m "make index: ${timestamp}" || exit 0
        git push
-       env: 
-        OAUTH_TOKEN: ${{ secrets.GH_API_TOKEN }} 
-        GH_USERNAME: ${{ secrets.GH_USERNAME }}
