@@ -31,7 +31,7 @@ jobs:
       run: bundle install --gemfile scripts/Gemfile
     - name: Run indexing script
       run: ruby scripts/make_index.rb
-	- name: Commit generated files
+    - name: Commit generated files
       run: |
 	  	git config user.name 'GitHub Actions'
 		git config user.email 'actions@users.noreply.github.com'
