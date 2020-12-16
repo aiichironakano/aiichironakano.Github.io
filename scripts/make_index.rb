@@ -23,7 +23,7 @@ def make_index(directory, children)
     tr.add_child "<tr>
     <td><a href = #{ File.join(child) }> #{ child } </a></td>
     <td> #{ f.mtime }</td>
-    <td align=\"right\">  ${ f.size } </td>
+    <td align=\"right\">  #{ f.size } </td>
     <td> #{ f.path }</td></tr>"
   end
   puts doc.to_html
