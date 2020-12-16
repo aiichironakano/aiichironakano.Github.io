@@ -33,12 +33,12 @@ jobs:
       run: ruby scripts/make_index.rb
     - name: Commit generated files
       run: |
-	  	git config user.name 'GitHub Actions'
-		git config user.email 'actions@users.noreply.github.com'
-		git add -A
-	    timestamp=$(date -u)
-		git commit -m "make index: ${timestamp}" || exit 0
-		git push
-	  env:
-	    OAUTH_TOKEN: ${{ secrets.GH_API_TOKEN }}
-	    GH_USERNAME: ${{ secrets.GH_USERNAME }}
+       git config user.name 'GitHub Actions'
+       git config user.email 'actions@users.noreply.github.com'
+       git add -A
+       timestamp=$(date -u)
+       git commit -m "make index: ${timestamp}" || exit 0
+       git push
+       env: 
+        OAUTH_TOKEN: ${{ secrets.GH_API_TOKEN }} 
+        GH_USERNAME: ${{ secrets.GH_USERNAME }}
