@@ -19,12 +19,12 @@ def make_index(directory, children)
   
   children.each do |child|
     tr            = doc.at_css "table"
-    f= File.new(File.join(directory, child))
+    f = File.stat(File.join(directory, child))
     tr.add_child "<tr>
     <td><a href = #{ File.join(child) }> #{ child } </a></td>
     <td> #{ f.mtime }</td>
     <td align=\"right\">  #{ f.size } </td>
-    <td> #{ f.path }</td></tr>"
+    <td> #{ f.ftype }</td></tr>"
   end
   puts doc.to_html
   doc.write_to(fh)
