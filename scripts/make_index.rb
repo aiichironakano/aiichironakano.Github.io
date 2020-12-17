@@ -22,7 +22,7 @@ def make_index(directory, children)
     f = File.stat(File.join(directory, child))
     tr.add_child "<tr>
     <td><a href = #{ File.join(child) }> #{ child } </a></td>
-    <td> #{ f.ctime }</td>
+    <td> #{ f.mtime }</td>
     <td align=\"right\">  #{ f.size } </td>
     <td> #{ f.ftype }</td></tr>"
   end
