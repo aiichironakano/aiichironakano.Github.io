@@ -3,10 +3,10 @@
 #include <time.h>
 
 int main() {
-  int Max_step; /* Maximum number of random-walk steps */
-  int N_walker; /* Number of walkers */
+  int Max_step; // Maximum number of random-walk steps
+  int N_walker; // Number of walkers
   int step,walker,k;
-  int x; /* Drunkard's position */
+  int x; // Drunkard's position
   int hist[1001];
 
   /* Input parameters */
@@ -16,9 +16,9 @@ int main() {
   scanf("%d",&N_walker);
 
   for (k=0; k<=1000; k++)
-    hist[k] = 0.0;
+    hist[k] = 0;
 
-  srand((unsigned)time((long *)0)); /* Initialize the rondom-number sequence */
+  srand((unsigned)time((long *)0)); // Initialize the random-number sequence
 
   for (walker=1; walker<=N_walker; walker++) {
     x = 0;
@@ -27,13 +27,13 @@ int main() {
         ++x;
       else
         --x;
-    } /* Endfor step */
+    } // Endfor step
     k = x + 500;
     ++hist[k];
-  } /* Endfor walker */
+  } // Endfor walker
 
   for (k=0; k<1001; k++)
-    printf("%d %d\n",k-500,hist[k]);
+    printf("%d\t%d\n",k-500,hist[k]);
 
   return 0;
 }
