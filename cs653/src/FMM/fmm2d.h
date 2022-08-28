@@ -1,20 +1,20 @@
 /*******************************************************************************
 File fmm2d.h is an include file for program fmm2d.c.
 *******************************************************************************/
-#define BOX 1.0         /* Cubic simulation-box size */
-#define Npar  1000      /* # of charged particles */
-#define L 4             /* Max level of refinement = quadtree height */
-#define P 6             /* Order of multipole & local expansions */
-#define Max_par 100000  /* Array size for particles */
-#define Max_cell 100000 /* Array size for quadtree cells */
-#define Max_level 20    /* Array size for quadtree levels (>= L+1) */
-#define Max_term 20     /* Array size for multipole|local terms (>= P) */
-#define EMPTY -1        /* NULL pointer in linked lists */
+#define BOX 1.0          /* Cubic simulation-box size */
+#define Npar  1000       /* # of charged particles */
+#define L 4              /* Max level of refinement = quadtree height */
+#define P 6              /* Order of multipole & local expansions */
+#define Max_par 1000000  /* Array size for particles */
+#define Max_cell 1000000 /* Array size for quadtree cells */
+#define Max_level 20     /* Array size for quadtree levels (>= L+1) */
+#define Max_term 20      /* Array size for multipole|local terms (>= P) */
+#define EMPTY -1         /* NULL pointer in linked lists */
 
 /* Variables for timing measurement *******************************************/
 
-double tfmm;            /* Wall-clock time for FMM */
-double tdirect;         /* Wall-clock time for direct calculation */
+double tfmm;             /* Wall-clock time for FMM */
+double tdirect;          /* Wall-clock time for direct calculation */
 
 /* Functions & function prototypes ********************************************/
 
