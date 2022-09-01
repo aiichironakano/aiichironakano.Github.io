@@ -18,7 +18,7 @@ int main(int argc, char **argv) {
   t1 = clock();
   mp_leaf();  /* Compute multipoles at the leaf cells */
   upward();  /* Upward pass to compute multipoles at all quadtree levels */
-  downward();  /* Dowaward pass to compute local-expansion terms */
+  downward();  /* Downward pass to compute local-expansion terms */
   nn_direct();  /* Evaluate potentials at all particle positions */
   t2 = clock();
   all_direct();  /* All-pairs direct evaluation of potentials for validation */
