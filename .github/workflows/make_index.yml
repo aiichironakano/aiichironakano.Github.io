@@ -26,7 +26,7 @@ jobs:
         ruby-version: 2.7
         bundler-cache: true # runs 'bundle install' and caches installed gems automatically
     - name: Run indexing script
-      run: ruby scripts/make_index.rb
+      run: bundle exec ruby scripts/make_index.rb
     - name: Commit generated files
       run: |
        git config user.name 'GitHub Actions'
