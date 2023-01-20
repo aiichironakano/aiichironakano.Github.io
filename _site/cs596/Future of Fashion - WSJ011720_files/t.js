@@ -1,1 +1,0 @@
-(function(){PostRelease.ProcessResponse({"version":"3","placements":[],"safeIframe":false});})();
