@@ -1,0 +1,217 @@
+<html>
+<head>
+	<title>SCIENTIFIC COMPUTING & VISUALIZATION LECTURE</title>
+</head>
+<body>
+
+<h2>
+<center>SCIENTIFIC COMPUTING & VISUALIZATION</center>
+</h2>
+
+<center>
+<table border="1">
+	<tr>
+		<th>&nbsp;&nbsp;&nbsp;&nbsp;<a href="cs596.html">Home</a>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+		<th>&nbsp;&nbsp;<a href="cs596-syllabus.html">Syllabus</a>&nbsp;&nbsp;</th>
+		<th>&nbsp;&nbsp;<a href="cs596-lecture.html">Lectures</a>&nbsp;&nbsp;</th>
+		<th>&nbsp;<a href="cs596-papers.html">Readings</a>&nbsp;</th>
+		<th><a href="cs596-assgn.html">Assignments</a></th>
+		<th>&nbsp;&nbsp;<a href="cs596-code.html">Codes</a>&nbsp;&nbsp;</th>
+		<th>&nbsp;&nbsp;&nbsp;&nbsp;<a href="cs596-link.html">Links</a>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+	</tr>
+</table>
+</center>
+
+<center><h3>Lecture Notes</h3></center>
+
+<ul>
+
+<li>	<a href="cs596/00Intro.pdf">Introduction</a>;
+		<a href="cs596/00Intro-VG.pdf">slides</a>;
+		<a href="cs596/MSCS-HPCS-slide.pdf">CSCI 596 in MSCS-HPCS (high performance computing and simulations) program</a>
+<p>
+
+<li>	<a href="cs596/01MD.pdf">Basic molecular dynamics algorithm</a>;
+		<a href="cs596/01-1LinkedListCell.pdf">linked-list cell MD algorithm</a>;
+		<a href="cs596/01MD-VG.pdf">slides</a>
+<p>
+
+<li>	<a href="cs596/02MPI.pdf">Message Passing Interface</a>;
+		<a href="cs596/MPI-VG.pdf">slides</a>;
+		<a href="https://carc.usc.edu/user-information/user-guides/high-performance-computing/discovery/getting-started">
+		getting started with Discovery cluster</a>
+<li>	<a href="cs596/MPI-Pi.pdf">Parallel computation of Pi--scalability</a>
+<li>	<a href="cs596/03ParallelMD.pdf">Parallel MD algorithm</a>;
+		<a href="cs596/MDmachine.pdf">introduction</a>;
+		<a href="cs596/ParallelMD-VG.pdf">slides</a>;
+		<a href="cs596/SplitMD.pdf">in situ analysis of MD simulation data using communicators</a>;
+		<a href="cs596/NT.pdf">Shaw's NT algorithm</a>;
+		see <a href="cs596/Shaw-ParMD-JCC05.pdf">
+		A fast, scalable method for the parallel evaluation of distance-limited pairwise particle interactions</a>,
+		D. E. Shaw, <i>J. Comput. Chem</i> <b>26</b>, 1318 (2005),
+		<a href="cs596/Kunaseth-ntuple-SC13.pdf">
+		A scalable parallel algorithm for dynamic range-limited n-tuple computation in many-body molecular dynamics simulation</a>,
+		M. Kunaseth et al., <i>Proc. of Supercomputing, SC13</i> (ACM/IEEE, 2013) and
+		<a href="cs596/Kunaseth-SCNBL-CPC19.pdf">
+		Shift/collapse on neighbor list (SC-NBL): fast evaluation of dynamic many-body potentials in molecular dynamics simulations</a>,
+		M. Kunaseth et al., <i>Comput. Phys. Commun.</i> <b>235</b>, 88 (2019)
+<p>
+
+<li>	<a href="cs596/04OpenMP.pdf">OpenMP</a>
+<li>	<a href="cs596/05HMD.pdf">Hybrid MPI+OpenMP parallel MD</a>; <a href="cs596/MiscHMD.pdf">additional slides</a>;
+		see <a href="cs596/Kunaseth-HTM-PDSEC13.pdf">
+		Performance characteristics of hardware transactional memory for molecular dynamics application on Blue Gene/Q:
+		toward efficient multithreading strategies for large-scale scientific applications</a>,
+		M. Kunaseth et al., best paper of <i>Proc. of PDSEC13</i> (IEEE, 2013);
+		<a href="http://www.hpcwire.com/2014/07/16/compilers-mpix">MPI+X</a>,
+		M. Wolfe, <i>HPC Wire</i> (2014);
+		<a href="cs596/Hoefler-MPI+MPI-Comp13.pdf">MPI+MPI</a>, 
+		T. Hoefler et al., <i>Computing</i> <b>95</b>, 1121 (2013).
+<p>
+
+<li>	<a href="cs596/Visual.pdf">Visualizing molecular dynamics</a>;
+		<a href="cs596/VizMD.pdf">slides</a>;
+		<a href="http://web.eecs.umich.edu/~sugih/courses/eecs487/glut-howto">
+		how to install OpenGL and GLUT</a>
+<li>	<a href="cs596/VMD.pdf">VMD & OVITO visualization of molecular dynamics</a>;
+		see <a href="cs596/Whitlock-InSituViz-PGV11.pdf">Parallel in situ visualization with a fully featured visualization system</a>,
+		B. Whitlock et al., <i>Proc. of PGV11</i> (Eurographics, 2011) and
+		<a href="cs596/Balabin-ETpathwayViz-JCompChem12.pdf">Biological electron transfer pathway analysis plugin for VMD</a>,
+		I. A. Balabin et al., <i>J. Comput. Chem.</i> <b>33</b>, 906 (2012);
+		<a href="cs596/Nakano-VizBET-CPC15.pdf">
+		A framework for stochastic simulations and visualization of biological electron-transfer dynamics</a>,
+		C. M. Nakano et al., <i> Comput. Phys. Commun.</i> <b>193</b>, 1 (2015) and
+		an associated <a href="cs596/5_5-012415.mov">movie</a>
+<li>	<a href="cs596/MassiveViz.pdf">Massive dataset visualization</a>; see
+		A. Sharma et al., <a href="cs596/Sharma-Viz-Presence03.pdf">
+		Immersive and interactive exploration of billion-atom systems</a>,
+		<i>Presence</i> <b>12</b>, 85 ('03),
+		X. Liu et al., <a href="cs596/Liu-VizNN-PDPTA02.pdf">
+		Improving interactivity of a parallel and distributed immersive walkthrough application 
+		for very large datasets with artificial neural network-based machine learning</a>,
+		<i>Proc. PDPTA</i> <b>IV</b>, 2054 ('02),
+		C. Zhang et al., <a href="cs596/Zhang-ParaViz-IJCS07.pdf">
+		ParaViz: a spatially decomposed parallel visualization algorithm using hierarchical visibility ordering</a>,
+		<i>Int'l J. Comput. Sci.</i> <b>1</b>, 407 ('07);
+		for tensor-field visualization, see:
+		L. Hesselink et al., <a href="cs596/Hesselink-VizTensor-IEEECGA94.pdf">
+		Research issues in vector and tensor field visualization</a>,
+		<i>IEEE Computer Graphics & Applications</i> <b>14</b>, 76 ('93), 
+		W. Ribarsky et al., <a href="cs596/Ribarsky-Glyphmaker-IEEEComputer94.pdf">
+		Glyphmaker: creating customized visualizations of complex data</a>,
+		<i>IEEE Computer</i> <b>27(7)</b>, 57 ('94), 
+		A. Sigfridsson et al., <a href="cs596/Sigfridsson-VizTensor-IEEEViz02.pdf">
+		Tensor field visualisation using adaptive filtering of noise fields combined with glyph rendering</a>,
+		<i>IEEE Visualization 2002</i>, (IEEE, 2002) p. 371,
+		E. Zhang et al., <a href="cs596/Zhang-TensorFieldDesign-IEEETVCG07.pdf">
+		Interactive tensor field design and visualization on surfaces</a>,
+		<i>IEEE T. Vis. Comput. Graph.</i> <b>13</b>, 94 ('07)
+
+<li>	<a href="cs596/VR.pdf">Virtual-reality programming</a>;
+		<a href="cs596/Horton-GEARS-SWX19.pdf">
+		Game-Engine-Assisted Research platform for Scientific computing (GEARS) in virtual reality</a>,
+		B. Horton et al., <i>SoftwareX</i> <b>9</b>, 112 (2019)
+<p>
+
+<li>	<a href="cs596/CUDA.pdf">CUDA</a>; see
+		L. Peng et al., <a href="cs596/Peng-pLBM-LNCS08.pdf">Parallel lattice Boltzmann flow simulation on emerging multi-core platforms</a>,
+		<i>Proc. Euro-Par 2008</i>, 763 (2008);
+		P. E. Small et al., <a href="cs596/Small-TupleDecompGPU-HPCAsia18.pdf">Acceleration of dynamic n-tuple computations in many-body molecular dynamics</a>,
+		<i>Proc. HPC Asia 2018</i> (2018);
+		Sasan Tavakkol's final project became a <a href="cs596/Sasan-WaterWave-GTC16.pdf">poster</a>
+		in <a href="https://www.nvidia.com/en-us/gtc">GPU Technology Conference</a>
+		(see nice videos <a href="https://www.youtube.com/watch?v=1ncB_Euuu_k&feature=youtu.be">1</a> & <a href="https://www.youtube.com/watch?v=tJeGviPzwEs&feature=youtu.be">2</a>);
+		C. Rizzo et al., <a href="cs596/Rizzo-PAR2-CPC19.pdf">PAR2: parallel random walk particle tracking method for solute transport in porous media</a>,
+		<i>Comput. Phys. Commun.</i> <b>239</b>, 265 (2019);
+		J. C. Phillips et al., <a href="cs596/Phillips-NAMD-GPU-JCP20.pdf">Scalable molecular dynamics on CPU and GPU architectures with NAMD</a>,
+		<i>J. Chem. Phys.</i> <b>153</b>, 044130 (2020);
+		S. Pall et al., <a href="cs596/Pall-GROMACS-GPU-JCP20.pdf">Heterogeneous parallelization and acceleration of molecular dynamics simulations in GROMACS</a>,
+		<i>J. Chem. Phys.</i> <b>153</b>, 134110 (2020)
+
+<li>	<a href="cs596/CUDA-PDF.pdf">Pair distribution computation with CUDA</a>;
+		see also B. G. Levine et al., <a href="cs596/Levin-RDFonGPU-JCP11.pdf">
+		<i>J. Comput. Phys.</i> <b>230</b>, 3556 (2011)</a>
+<li>	<a href="cs596/MPI+OMP+CUDA.pdf">Hybrid MPI+OpenMP+CUDA computing</a>
+<li>	See <a href="cs596/Dongarra-HPCAsia18.pdf">HPC Asia presentation</a> by Jack Dongarra on reduced-precision computation & tensor cores.
+<p>
+
+<li>	<a href="cs596/OMPtarget.pdf">OpenMP target offload</a>
+<li>	<a href="cs596/openmp-4.5.pdf">OpenMP 4.5 specification</a>
+<p>
+
+<li>	<a href="cs596/DPCPP.pdf">Data parallel C++</a>
+<li>	<a href="cs596/Data+Parallels+C+++Chapter+Previews.pdf">DPC++ book</a>
+		by B. Ashbaugh et al. (Intel, 2020, unedited review copy)
+<p>
+
+<li>	<a href="cs596/OptMD.pdf">Optimizing molecular dynamics</a>; see Berkeley CS267 lecture on
+		<a href="https://www.google.com/url?q=https://drive.google.com/file/d/1eATSXY3N05JpkzmKs8dRUBLw9Gi2FhFG/view?usp%3Dsharing&sa=D&ust=1603652476538000&usg=AFQjCNEWMvcruZTQXD5t50lWVt1_Ca_hdw">
+		Single processor machines: memory hierarchies and processor features</a> by Prof. Kathy Yelick;
+		for BLAS-ification, see K. Nomura et al., <a href="cs596/Nomura-MetascalableQMD-SC14.pdf">
+		Metascalable quantum molecular dynamics simulations of hydrogen-on-demand</a>,
+		<i> Prof. Supercomputing, SC14</i> (IEEE/ACM, '14); for MD optimization, see
+		J. Mellor-Crummey et al., <a href="cs596/Mellor-MDlayout-IJPP01.pdf">
+		Improving memory hierarchy performance for irregular applications using data and computation reorderings</a>,
+		<i>Int'l J. Par. Prog.</i> <b>29</b>, 217 ('01);
+		<a href="https://software.intel.com/en-us/vtune">Intel Vtune performance amplifier</a>
+<li>	<a href="cs596/AdvPar.pdf">Advanced topics in parallel molecular dynamics</a>
+<li>	<a href="cs596/DC.pdf">Metascalable divide-conquer-recombine algorithmic framework</a>;
+		<a href="cs596/Romero-QMD-IEEEComputer15.pdf">Quantum molecular dynamics in the post-petaflop/s era</a>,
+		N. A. Romero et al., <i>IEEE Computer</i> <b>48(11)</b>, 33-41 (2015)
+<p>
+
+<li>	<a href="cs596/Grid.pdf">Grid computing</a>
+<li>	<a href="cs596/MapReduce.pdf">MapReduce</a>;
+		<a href="https://github.com/JackMing/Hadoop-2.6.0-on-USC-HPCC-Clusters">
+		using Hadoop at USC-HPC</a>
+<p>
+
+<li>	<a href="cs596/Git-VG.pdf">GitHub</a>
+<p>
+
+<li>	Miscellaneous lectures:
+	<ul>
+	<li>	<a href="cs596/MSCS-HPCS.pdf">MSCS-HPCS</a>: Master of Science
+			in Computer Science specialized in High Performance Computing
+			and Simulations; see also
+			<a href="https://www.cs.usc.edu/academic-programs/masters/high-performance-computing-simulations/">
+			MSCS-HPCS information</a>
+	<li>	<a href="cs596/TaylorExpansion.pdf">Taylor's expansion</a>
+	<li>	<a href="cs596/Liouville.pdf">Liouville's theorem</a>
+	<li>	<a href="cs596/LeastSquareFit.pdf">Least square fit of a line</a>
+	<li>	<a href="cs596/AsymptoticAnalysis.pdf">Asymptotic analysis of functions</a>
+	<li>	<a href="cs596/PeakFlops.pdf">Theoretical peak performance of a computer</a>
+	<li>	<a href="cs596/Sqrt.pdf">Arithmetic implementation of sqrt() & floating-point performance</a>
+	<li>	<a href="cs596/CSC596_HPClusterIntroSept2015.pdf">
+			Introduction to HPC cluster computing</a> by
+			Avalon Johnson at USC Center for High Performance Computing (HPC)
+	<li>	<a href="cs596/Beowulf.pdf">
+			20 years of Beowulf<a>; see <a href="cs596/MassiveDataAnalysis-NRC13.pdf">
+			Frontiers in Massive Data Analysis</a> (National Research Council, 2013)
+			and <a href="cs596/Nakano-DCR-Beowulf14.pdf">our Beowulf14 paper</a>
+	<li>	<a href="cs596/ParQD.pdf">
+			Parallel quantum dynamics</a>
+	<li>	<a href="cs596/ParallelPDF.pdf">
+			Parallel pair-distribution computation</a>; see also
+			<a href="cs596/Grupcev-PairCorr-TKDE13.pdf">Approximate algorithms for computing spatial distance histograms with accuracy guarantees</a>,
+			V. Grupcev et al., <i>IEEE TKDE</i> <b>25</b>, 1982 ('13)
+	<li>	<a href="cs596/OrderInvariantSum.pdf">Order-invariant real number summation</a>; see also
+			<a href="cs596/Small-OrderInvariantSum-IPDPS16.pdf">Order-invariant real number summation: circumventing accuracy loss for multimillion summands on multiple parallel architectures</a>,
+			P. E. Small et al., <i>Proc. IEEE IPDPS</i>, 152 ('16)
+	<li>	<a href="cs699/PreBeowulf.pdf">Pre-Beowulf parallel computing</a>
+	<li>	<a href="cs596/ParallelComputingWithMATLAB.pdf">
+			Parallel computing using Matlab</a>
+			by Raymond Norris (MathWorks)
+	<li>	<a href="https://www.google.com/url?q=https://drive.google.com/open?id%3D0B3CB5uoiNO-8dVZrcEdLSGdoZGs&sa=D&ust=1510086772336000&usg=AFQjCNF52_6bMNk9xEkAcHj8leWdrZcFqQ">
+			Parallel graph algorithms</a> by Aydin Buluc (UC Berkeley)
+	<li>	<a href="cs596/Phi.pdf">Intel Xeon Phi programming</a>
+	<li>	<a href="cs596/Exascaler.pdf">
+			Exascaler story</a>
+	<li>	<a href="cs596/Moen-VR.pdf">
+			Virtual reality as a research tool</a> by Erick Moen
+	</ul>
+
+</ul>
+
+</body>
+</html>

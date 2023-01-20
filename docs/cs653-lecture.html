@@ -1,0 +1,148 @@
+<html>
+<head>
+	<title> HIGH PERFORMANCE COMPUTING AND SIMULATIONS LECTURE </title>
+</head>
+<body>
+
+<h2>
+<center>HIGH PERFORMANCE COMPUTING AND SIMULATIONS</center>
+</h2>
+
+<center>
+<table border="1">
+	<tr>
+		<th>&nbsp;&nbsp;&nbsp;&nbsp;<a href="cs653.html">Home</a>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+		<th>&nbsp;&nbsp;<a href="cs653-syllabus.html">Syllabus</a>&nbsp;&nbsp;</th>
+		<th>&nbsp;&nbsp;<a href="cs653-lecture.html">Lectures</a>&nbsp;&nbsp;</th>
+		<th>&nbsp;<a href="cs653-papers.html">Readings</a>&nbsp;</th>
+		<th><a href="cs653-assgn.html">Assignments</a></th>
+		<th>&nbsp;&nbsp;<a href="cs653-code.html">Codes</a>&nbsp;&nbsp;</th>
+		<th>&nbsp;&nbsp;&nbsp;&nbsp;<a href="cs653-link.html">Links</a>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+	</tr>
+</table>
+</center>
+
+<center><h3>Lecture Notes</h3></center>
+
+<ul>
+
+<li>	Introduction: <a href="cs653/HPCScourses.pdf">HPCS courses</a>;
+		<a href="cs653/00Intro.pdf">slides</a>
+
+<li>	Deterministic particle simulation algorithms
+	<ul>
+	<li>	Survey of molecular dynamics (MD): <a href="cs653/01SurveyMD.pdf">notes</a> and 
+			<a href="cs653/01MD.pdf">slides</a>
+	<li>	Fast multipole method--multiresolution in space: <a href="cs653/01-1FMM.pdf">slides</a>;
+			<a href="cs653/ComplexFn.pdf">minimal complex analysis</a>;
+			<a href="cs653/ChargedLine.pdf">electrostatic potential around a charged line</a>;
+			<a href="cs653/2dMultipole.pdf">multipole expansion of 2d Coulomb potential</a>;
+			<a href="cs653/2dFMM.pdf">fast multipole method algorithm in 2d</a>
+	<li>	Multiple time stepping--multiresolution in time: <a href="cs653/01-2MTS.pdf">slides</a>
+	</ul>
+
+<li>	Parallel computing frameworks
+	<ul>
+	<li>	Parallel computing basics and parallel molecular dynamics: 
+			message passing interface (MPI) <a href="cs653/02MPI.pdf">notes</a> and 
+			<a href="cs653/02-00MPI-slide.pdf">slides</a>;
+			parallel MD algorithms <a href="cs653/02-1ParallelMD.pdf">notes</a> and 
+			<a href="cs653/02-01ParallelMD-slide.pdf">slides</a>; 
+			<a href="cs653/02-2Scalability.pdf">scalability analysis of parallel 
+			molecular-dynamics and fast-multipole-method algorithms</a>;
+			multithreading using <a href="cs653/02-02OpenMP-slide.pdf">OpenMP</a>;
+			<a href="cs653/02-03HMD-slide.pdf">hybrid MPI+OpenMP programming</a>;
+			<a href="cs653/MDmachine.pdf">MD machines</a>;
+			<a href="cs653/NT.pdf">Shaw's MD algorithm</a>
+	<li>	Divide-and-conquer parallelism: <a href="cs653/02-3DC.pdf">notes</a> and
+			<a href="cs653/02-04DC-slide.pdf">slides</a>; 
+			<a href="cs653/ReproducibleSum.pdf">reproducible global sum</a>
+	<li>	Load balancing: <a href="cs653/02-05LoadBalance-slide.pdf">slides</a>;
+			Lanczos method for eigensystems (<a href="cs653/Lanczos.pdf">slides</a> and
+			<a href="cs653/LanczosSuppl.pdf">supplementary notes</a>) used in spectral bisection
+			load balancer
+	<li>	Optimizing parallel MD: <a href="cs653/02-10OptMD-slide.pdf">slides</a>; 
+			lecture note by Prof. Kathy Yelick (UC Berkeley) on 
+			<a href="https://drive.google.com/file/d/1jXpTLKpa1g_Fr46bLHJw8r5fyyn0zqxu/view">
+			memory hierarchies and matrix multiplication</a>
+	<li>	New architectures: <a href="cs653/02-20CUDA-slide.pdf">graphics processing unit (GPU) programming using CUDA</a>;
+			<a href="cs653/02-21MPI+OMP+CUDA-slide.pdf">running a hybrid MPI+OpenMP+CUDA program at HPC</a>;
+			<a href="cs653/OMPtarget.pdf">OpenMP target offload</a> for heterogeneous devices;
+			<a href="cs653/openmp-4.5.pdf">OpenMP 4.5 specification</a>;
+			<a href="cs653/DPCPP.pdf">Data parallel C++</a>;
+			<a href="cs653/DPC++21.pdf">Data Parallel C++</a> by J. Reinders et al. (Apress, 2020);
+			<a href="cs653/LBPS3.pdf">lattice-Boltzmann fluid simulation on a Playstation3 cluster</a>;
+			<a href="cs653/GodsonT-UCHPC.pdf">MD simulation on GodsonT</a>
+	</ul>
+
+<li>	Deterministic continuum simulation algorithms
+	<ul>
+	<li>	Survey of quantum dynamics (QD): <a href="cs653/03QD.pdf">QD basics</a>;
+			<a href="cs653/03-1SpectralQD.pdf">spectral QD and fast Fourier transform (FFT)</a>;
+			<a href="cs653/03-00QD-slide.pdf">parallelizing QD (slides)</a>
+	<li>	Multiresolution numerical methods: <a href="cs653/03-01MultiRes-slide.pdf">slides</a>; 
+			<a href="cs653/NRC-c13.10-Wavelets.pdf">wavelets (Numerical Recipes, Sec. 13.10)</a>; 
+			<a href="cs653/03-2Wavelet.pdf">multiresolution analysis using wavelets</a>; 
+			<a href="cs653/NRC-c19.6-MG.pdf">multigrid method (Numerical Recipes, Sec. 19.6)</a>;
+			<a href="cs653/FermiON.pdf">Fermi-operator expansion for linear-scaling
+			electronic structure calculations</a>
+	</ul>
+
+<li>	Hybrid particle/continuum simulation methods
+	<ul>
+	<li>	Multiscale simulation methods: <a href="cs653/04Multiscale.pdf">slides</a>
+	</ul>
+
+<li>	Scientific data analysis and visualization
+	<ul>
+	<li>	Visualization basics--OpenGL programming and visualizing particles: 
+			<a href="cs653/05Visual.pdf">notes</a> and 
+			<a href="cs653/05-0Viz-slide.pdf">slides</a>;
+			<a href="http://web.eecs.umich.edu/~sugih/courses/eecs487/glut-howto">
+			how to use OpenGL and GLUT with Microsoft Visual Studio</a>;
+			for the visualization of quatum wave functions, see  
+			<a href="cs653/Richardson-QDCM2-CPC91.pdf">Visualizing quantum scattering on the CM-2 supercomputer</a>,
+			J. L. Richardson, <i>Comput. Phys. Commun.</i> <b>63</b>, 84 (1991)
+	<li>	Massive dataset visualization: <a href="cs653/05-1MassiveViz-slide.pdf">slides</a>
+	<li>	Scientific data mining and machine learning: <a href="cs653/05-2DataLearn-slide.pdf">slides</a>;
+			ATPESC lectures on 
+			<a href="http://press3.mcs.anl.gov/atpesc/files/2019/08/ATPESC_2019_Track-8_1_8-9_830am_Balaprakash-Deep_Learning_Basics.pdf">
+			deep learning basics</a> and
+			<a href="https://anl.box.com/s/ujkvbb8glmq7n6gzjhxza7vx7n3wa86u">
+			data parallel deep learning</a>
+	</ul>
+
+<li>	Stochastic simulation methods
+	<ul>
+	<li>	Monte Carlo (MC) simulation basics: <a href="cs653/06MCbasics.pdf">MC basics</a>; 
+			<a href="cs653/06-1ParIsing.pdf">parallel MC</a>;
+			<a href="cs653/KMCplusPar.pdf">parallel kinetic MC simulation</a>;
+			<a href="cs653/KMCet.pdf">kinetic MC simulation of electron transfer</a>
+	<li>	Long time dynamics and global optimization 
+	<li>	Stochastic continuum simulations
+	</ul>
+
+<li>	Distributed scientific computing
+	<ul>
+	<li>	Grid computing basics for application scientists: <a href="cs653/07-0Grid-slide.pdf">slides</a>
+	<li>	Grid-enabling scientific applications
+	<li>	<a href="cs653/07-1MapReduce-slide.pdf">MapReduce for cloud computing</a>
+	</ul>
+
+<li>	Quantum computational science
+	<ul>
+	<li>	<a href="cs653/08QComp.pdf">Quantum computing</a>
+	<li>	Quantum gates and circuits: <a href="cs653/08-1QuantumGates.pdf">hands-on</a>
+	<li>	Transverse-field Ising model: <a href="cs653/08-2TFIM.pdf">hands-on</a>
+	</ul>
+
+<li>	Miscellaneous lectures
+	<ul>
+	<li>	<a href="cs653/Git.pdf">GitHub</a>
+	<li>	<a href="cs653/Sqrt.pdf">Arithmetic implementation of sqrt() & floating-point performance</a>
+	</ul>
+
+</ul>
+
+</body>
+</html>

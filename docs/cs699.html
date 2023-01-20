@@ -1,0 +1,147 @@
+<html>
+<head>
+	<title>EXTREME-SCALE QUANTUM SIMULATIONS</title>
+</head>
+<body>
+
+<h2>
+<center>EXTREME-SCALE QUANTUM SIMULATIONS (Spring 2018)</center>
+</h2>
+
+<center>
+<table border="1">
+	<tr>
+		<th>&nbsp;&nbsp;&nbsp;&nbsp;<a href="cs699.html">Home</a>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+		<th>&nbsp;&nbsp;<a href="cs699-syllabus.html">Syllabus</a>&nbsp;&nbsp;</th>
+		<th>&nbsp;&nbsp;<a href="cs699-lecture.html">Lectures</a>&nbsp;&nbsp;</th>
+		<th>&nbsp;<a href="cs699-papers.html">Readings</a>&nbsp;</th>
+		<th><a href="cs699-assgn.html">Assignments</a></th>
+		<th>&nbsp;&nbsp;<a href="cs699-code.html">Codes</a>&nbsp;&nbsp;</th>
+		<th>&nbsp;&nbsp;&nbsp;&nbsp;<a href="cs699-link.html">Links</a>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+	</tr>
+</table>
+</center>
+<p>
+
+<b>Course Number:</b> CSCI 699<br>
+<b>Class Number:</b> 29950D<br>
+<b>Instructor:</b>
+<A HREF="http://cacs.usc.edu/nakano.php">Aiichiro Nakano</A>;
+office: VHE 610; phone: (213) 821-2657; email: anakano@usc.edu<br>
+<b>Lecture:</b> 5:00-6:50pm M W, GFS 223<br>
+<b>Office Hour:</b> 5:00-5:50pm F, VHE 610<br>
+<b>HPC Office Hour:</b> 2:30-5:00 pm T, LVL 3M<br>
+<b>Prerequisites:</b> (1) CSCI596 or basic experience in parallel computing; and 
+(2) PHYS 516 or basic knowledge of numerical methods in computational sciences.<br>
+<b>Textbooks:</b>
+None; all course materials are provided online on the course Web page. See also:<br>
+<a href="https://www.amazon.com/Electronic-Structure-Theory-Practical-Methods/dp/0521534402">
+Electronic structure</a>, R. M. Martin (Cambridge Univ. Press, '04),<br>
+<a href="https://www.amazon.com/Ab-Initio-Molecular-Dynamics-Advanced/dp/0521898633">
+Ab initio molecular dynamics</a>, D. Marx & J. Hutter (Cambridge Univ. Press, '09),<br>
+<a href="https://www.amazon.com/Time-Dependent-Density-Functional-Theory-Concepts-Applications/dp/0199563020">
+Time-dependent density-functional theory</a>, C. A. Ullrich (Oxford Univ. Press, '12),<br>
+<a href="http://www.amazon.com/Effective-Computation-Physics-Anthony-Scopatz/dp/1491901535">
+Effective computation in physics</a>, A. Scopatz & K. D. Huff (O'Reilly, '15).<br>
+<p>
+
+<b> Course Description </b><br>
+
+Computer simulation of quantum-mechanical dynamics has become an essential enabling 
+technology for physical, chemical and biological sciences and engineering. 
+Quantum-dynamics simulations on extreme-scale parallel supercomputers would provide 
+unprecedented predictive power, but pose enormous challenges as well. 
+This course surveys and projects algorithmic and computing technologies that will make 
+quantum-dynamics simulations metascalable, i.e., "design once, continue to scale 
+on future computer architectures".
+<br><br>
+The course first covers how the exponential time complexity for solving 
+the quantum N-body problem is reduced to 
+(1) O(N<sup>3</sup>) within the density functional theory (DFT), for which Walter Kohn received a Nobel chemistry prize in 1998, and 
+(2) O(N) based on physical data-locality principles (e.g., Kohn's quantum nearsightedness principle). 
+The course then introduces key abstractions (e.g., pseudopotentials and exchange-correlation functionals) 
+and representation issues (e.g., plane-wave basis vs. real-space multigrids), 
+which are necessary for efficient implementation of quantum molecular dynamics (QMD) simulations. 
+This is followed by the design of QMD simulation algorithms on massively parallel supercomputers 
+using message passing and multithreading, including our metascalable divide-conquer-recombine (DCR) algorithmic framework, 
+as well as performance optimization on modern many-core processors 
+and accelerators through memory hierarchies and vectorization. 
+Advanced topics to be covered include 
+(1) DCR approaches to excitation dynamics, 
+(2) intersection of machine learning and quantum N-body problem, and 
+(3) merger of quantum Monte Carlo (QMC) and QMD methods. 
+The course ends with best software practices for co-developing extreme-scale QMD software for million-way parallelism.
+<br><br>
+Students will learn fundamental knowledge and gain hands-on experience in order to:
+(1) reduce the intractable quantum many-body problem to lower-complexity problems, while retaining the essential physics; 
+(2) design scalable parallel algorithms for linear-scaling quantum-dynamics simulations; 
+(3) develop metascalable quantum-dynamics software on current and future computer architectures.
+
+<p ALIGN="CENTER"><img SRC="angle-v6.png" WIDTH="700" HEIGHT="200"></p>
+<p ALIGN="CENTER">Nonadiabatic quantum molecular dynamics simulation
+to study photoexcitation dynamics in MoSe<sub>2</sub> bilayer
+[M.-F. Lin et al., <i>Nature Commun.</i> <b>8</b>, 1745 (2017)].</p>
+
+<h4>Announcements</h4>
+<ul>
+
+<li>	1/8 (M): Class begins.
+<li>	1/8 (M): This class will have guest participants: <a href="http://kuid.ofc.kobe-u.ac.jp/InfoSearch/html/researcher/researcher_o4UzSdTcqNrO-IBQ3mbe3w_en.html">Prof. Kohei Shimamura</a>,
+	<a href="http://eniac.scitec.kobe-u.ac.jp/tanaka/index_en.html">Prof. Shigenori Tanaka</a>, 
+	and several graduate students from <a href="http://www.kobe-u.ac.jp/en/index.html">Kobe University</a> in Japan.
+<li>	1/8 (M): <a href="http://www.damp.tottori-u.ac.jp/~hoshi/post-K-algo-PD.html">Postdoctoral scientist position</a> for computational materials science on Japanese post-K supercomputer;
+	<a href="cs699/post-K-algo-PD-en.pdf">information</a>; see also Prof. Takeo Hoshi's <a href="cs699/Hoshi-100M-polymer-SCALA16.pdf">100 million-atom quantum simulation paper</a>.
+<li>	1/11 (Th): Seminar on <a href="phys516/Kaxiras_abstract.pdf">machine learning for materials modeling</a> by Prof. Efthimios Kaxiras (Harvard) at 12:45 pm in ZHS 159.
+<li>	1/15 (M): No class (Martin Luther King Jr. Day).
+<li>	1/17 (W): Getting started with <a href="https://github.com/USCCACS/QXMD_Course">QXMD software</a> -- please bring your laptop to the class.
+<li>	1/22 (M): HPC accounts for USC students are ready. Please work in the class director, /home/rcf-proj/an1.
+<li>	1/22 (M): See Aurora Early Science Program (ESP) on 
+	<a href="https://www.alcf.anl.gov/articles/early-science-projects-aurora-supercomputer-announced">simulation</a>
+	and <a href="https://www.alcf.anl.gov/early-science-program">data & learning</a>.
+<li>	1/22 (M): Lecture on basic QMD equations.
+<li>	1/24 (W): Lecture & discussion on DFT.
+<li>	1/29 (M): Lecture on exchange-correlation functional.
+<li>	1/31 (W): Lecture on pseudopotentials.
+<li>	2/5 (M): Programs on SCAN metaGGA functional (metagga.F), DFTD3 (dftd3/) & PAW construction (atm7.f)
+		are found in <a href="https://drive.google.com/drive/folders/1qUNOuPu3q58mH4OL2DPjCjVGn_YfLYYh">
+		Google Drive</a>.
+<li>	2/5 (M): Discussion on pseudopotentials.
+<li>	2/7 (W): Our Aurora/A21 Early Science Program (ESP) project mentioned in
+		<a href="http://www.sciencemag.org/news/2018/02/racing-match-chinas-growing-computer-power-us-outlines-design-exascale-computer">
+		Science magazine news</a>; <a href="cs699/Service-Exascale-Science18.pdf">article</a>.
+<li>	2/7 (W): <a href="https://minghsiehee.usc.edu/2018/02/%E7%A7%81%E3%81%AE%E4%B8%96%E7%95%8C%E4%B8%80%E5%91%A8%EF%BC%9A%E6%96%87%E5%8C%96%E3%81%A8%E7%A7%91%E5%AD%A6%E5%88%86%E9%87%8E%E3%82%92%E8%B6%8A%E3%81%88%E3%81%A6/">
+		First Japanese USC blog</a> by Fatemeh.
+<li>	2/7 (W): Lecture on representation and solution.
+<li>	2/12 (M): Hands on assignment 1: Born-Oppenheimer molecular dynamics (BOMD).
+<li>	2/14 (W): Linear-scaling QMD basics.
+<li>	2/16 (F): Discussion session for assignment 1 at 5:00 pm in VHE 610
+<li>	2/19 (M): No class (President's Day).
+<li>	2/21 (W): See <a href="https://exascaleage.org/">DOE exascale reports</a>, in particular <a href="cs699/1341721.pdf">BES report</a>.
+<li>	2/21 (W): Advanced linear-scaling QMD methods.
+<li>	2/26 (M): Hands on assignment 2: Construct your own projector augmented waves (PAW).
+<li>	2/28 (W): Lecture on nonadiabatic quantum molecular dynamics (NAQMD).
+<li>	2/28 (W): Kobe-USC photoshoot: <a href="cs699/IMG_8914.JPG">photo1</a>, <a href="cs699/IMG_8915.JPG">photo2</a>
+<li>	3/2 (F): No office hour; <a href="https://magics.usc.edu/workshop">MAGICS workshop</a>.
+<li>	3/5 (M): Hands on assignment 3: NAQMD.
+<li>	3/7 (W): Lecture on linear-response time-dependent density functional theory (LR-TDDFT).
+<li>	3/7 (W): Information session by <a href="cs699/USC Flyer_2018-03-07.pdf">QuantLab</a>.
+<li>	3/12 (M), 3/14 (W): No class (spring recess).
+<li>	3/19 (M): Lecture on hybrid exact-exchange and excited-state force calculations.
+<li>	3/21 (W): Lecture on parallel QMD.
+<li>	3/26 (M): Lecture on advanced parallel QMD.
+<li>	3/28 (W): Discussion of real-space DFT on K computer: Hasegawa et al., <i>Proc. Supercomputing, SC11</i> (2011) led by Xiangyu.
+<li>	4/2 (M): Hands on assignment 4: Linear-response time-dependent density functional theory (LR-TDDFT).
+<li>	4/4 (W): Discussion of density matrix renormalization group (DMRG) papers led by Yongqian.
+<li>	4/9 (M): Lecture on neural network force field (NNFF) by Prof. Kohei Shimamura (Kobe Univ.);
+		jointly with MASC 576 in RTH 109 (please noe the different class room, only for this day).
+<li>	4/11 (W): Discussion of NNFF papers led by Size, Yuan and Shichun.
+<li>	4/16 (M): Discussion of Harris-functional papers led by Ben.
+<li>	4/18 (W): Discussion of (1) information-theory/renormalization-group/neural-network papers led by Kyle,
+		and (2) "quantum chemistry on quantum computer" paper by Guoqing and Yuzi.
+<li>	4/23 (M), 4/25 (W): Final project presentations.
+<li>	5/9 (W): Final project report due.
+
+</ul>
+
+</body>
+</html>
