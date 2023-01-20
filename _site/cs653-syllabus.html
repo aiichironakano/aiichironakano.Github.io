@@ -1,0 +1,99 @@
+<html>
+<head>
+	<title> HIGH PERFORMANCE COMPUTING AND SIMULATIONS SYLLABUS </title>
+</head>
+<body>
+
+<h2>
+<center> HIGH PERFORMANCE COMPUTING AND SIMULATIONS</center>
+</h2>
+
+<center>
+<table border="1">
+	<tr>
+		<th>&nbsp;&nbsp;&nbsp;&nbsp;<a href="cs653.html">Home</a>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+		<th>&nbsp;&nbsp;<a href="cs653-syllabus.html">Syllabus</a>&nbsp;&nbsp;</th>
+		<th>&nbsp;&nbsp;<a href="cs653-lecture.html">Lectures</a>&nbsp;&nbsp;</th>
+		<th>&nbsp;<a href="cs653-papers.html">Readings</a>&nbsp;</th>
+		<th><a href="cs653-assgn.html">Assignments</a></th>
+		<th>&nbsp;&nbsp;<a href="cs653-code.html">Codes</a>&nbsp;&nbsp;</th>
+		<th>&nbsp;&nbsp;&nbsp;&nbsp;<a href="cs653-link.html">Links</a>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+	</tr>
+</table>
+</center>
+
+<center><h3>Syllabus</h3></center>
+
+<ul>
+<li>	Deterministic particle simulation algorithms
+	<ul>
+	<li>	Survey of molecular dynamics (MD) simulation: spatiotemporal data locality in MD
+	<li>	Spatiotemporal multiscale algorithms
+	<li>	Fast computation of electrostatic interaction: O(N) fast multipole method
+	<li>	Multiple time stepping: fuzzy cluster dynamics
+	</ul>
+<li>	Parallel computing frameworks
+	<ul>
+	<li>	Parallel algorithm design: divide-conquer-"recombine" parallelization, 
+			spatial vs. particle vs. force vs. tuple decomposition, data-driven parallelization
+	<li>	Load balancing: wavelet-based computational space decomposition,
+			recursive spectral bisection, spacefilling-curve decomposition, load diffusion
+	<li>	Scalability analysis
+	<li>	New architectures: multicore, graphics processing unit (GPU), artificial-intelligence accelerators, and quantum scientific computing
+	<li>	Hybrid message-passing + multithreading + data-parallel accelerator programming: MPI, OpenMP, CUDA, OpenMP target, SYCL, Qiskit
+	<li>	Performance profiling and optimization: roofline model
+	<li>	Optimization of parallel scientific applications
+	</ul>
+<li>	Deterministic continuum simulation algorithms
+	<ul>
+	<li>	Survey of quantum dynamics (QD) simulation
+	<li>	Fast solutions of partial differential equations (PDE): O(NlogN) fast Fourier transform,
+			O(N) wavelet transform, O(N) multigrid method
+	<li>	O(N) Lanczos and Davidson algorithms for the eigenvalue problem
+	<li>	Newton Krylov-subspace solvers for nonlinear equations
+	<li>	Algebraic BLASification
+	</ul>
+<li>	Multiscale particle-continuum simulation
+	<ul>
+	<li>	Hybridization techniques: minimizing model-boundary artifacts,
+			modular algorithm design, adaptive hybridization
+	<li>	O(N) multiscale optimization
+	<li>	Space-time multiscaling
+	</ul>
+<li>	Stochastic simulation algorithms
+	<ul>
+	<li>	Survey of Monte Carlo (MC) simulation: estimator, importance sampling, Markov chain,
+			Metropolis algorithm
+	<li>	Simulated annealing
+	<li>	Kinetic MC: master equation, Poisson process
+	</ul>
+<li>	Distributed scientific computing
+	<ul>
+	<li>	Grid/cloud programming
+	<li>	Grid/cloud enabling parallel applications: virtualization-aware scientific algorithms
+			based on data-locality principles
+	<li>	Distributed MC applications: parallel replica and replica exchange MC
+	</ul>
+<li>	Scientific data visualization and learning
+	<ul>
+	<li>	Interactive visualization of large datasets in immersive virtual environment:
+			hierarchical/probabilistic culling algorithms
+	<li>	Topology analysis: shortest-path circuits, parallel graph algorithms
+	<li>	Scientific machine learning
+	<li>	Data compression
+	<li>	Singular value decomposition for low-rank approximations
+	<li>	Integration of simulation, visualization and machine-learning workflows on Grid/cloud
+	</ul>
+<li>	Advanced scientific computing methods
+	<ul>
+	<li>	Local and global optimization in molecular dynamics: physically-based preconditioning
+			of iterative solvers, basin-hopping algorithms, disconnectivity-graph analysis of
+			the energy landscape
+	<li>	Accelerated long-time dynamics: path-integral sampling, ensemble mean-field method,
+			hyper dynamics, activation-relaxation metadynamics
+	<li>	Explorative search: pathfinders
+	</ul>
+</ul>
+
+</body>
+</html>
