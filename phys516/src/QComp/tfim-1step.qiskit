@@ -3,14 +3,10 @@
 import numpy as np
 
 # Import standard Qiskit libraries
-from qiskit import QuantumCircuit, transpile, Aer, IBMQ
-from qiskit.tools.jupyter import *
+from qiskit import QuantumCircuit
+from qiskit_aer import AerSimulator
 from qiskit.visualization import *
 from ibm_quantum_widgets import *
-from qiskit.providers.aer import QasmSimulator
-
-# Load your IBM Quantum account
-provider = IBMQ.load_account()
 
 ### Physical parameters (atomic units) ###
 J = 1.0    # Exchange coupling
@@ -29,11 +25,11 @@ circ.cx(0, 1)        #                                    (3)
 circ.measure(range(2), range(2))  # Measure both spins
 circ.draw('mpl')
 
-### Simulate on OpenQASM backend ###
 
-# Use Aer's Qasm simulator
-from qiskit.providers.aer import QasmSimulator
-backend = QasmSimulator()
+### Simulate on simulator backend ###
+
+# Use Aer simulator
+backend = AerSimulator()
 # Transpile the quantum circuit to low-level QASM instructions
 from qiskit import transpile
 circ_compiled = transpile(circ, backend)
