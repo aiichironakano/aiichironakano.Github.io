@@ -1,0 +1,97 @@
+<html>
+<head>
+	<title>EXTREME-SCALE QUANTUM SIMULATIONS</title>
+</head>
+<body>
+
+<h2>
+<center>EXTREME-SCALE QUANTUM SIMULATIONS (Fall 2024)</center>
+</h2>
+
+<center>
+<table border="1">
+	<tr>
+		<th>&nbsp;&nbsp;&nbsp;&nbsp;<a href="phys760.html">Home</a>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+		<th>&nbsp;&nbsp;<a href="phys760-syllabus.html">Syllabus</a>&nbsp;&nbsp;</th>
+		<th>&nbsp;&nbsp;<a href="phys760-lecture.html">Lectures</a>&nbsp;&nbsp;</th>
+		<th>&nbsp;<a href="phys760-papers.html">Readings</a>&nbsp;</th>
+		<th><a href="phys760-assgn.html">Assignments</a></th>
+		<th>&nbsp;&nbsp;<a href="phys760-code.html">Codes</a>&nbsp;&nbsp;</th>
+		<th>&nbsp;&nbsp;&nbsp;&nbsp;<a href="phys760-link.html">Links</a>&nbsp;&nbsp;&nbsp;&nbsp;</th>
+	</tr>
+</table>
+</center>
+<p>
+
+<b>Course Number:</b> PHYS 760 (Selected Topics in Computational Physics)<br>
+<b>Section:</b> 50666R<br>
+<b>Session:</b> 001<br>
+<b>Instructor:</b>
+<A HREF="http://cacs.usc.edu">Aiichiro Nakano</A>;
+office: VHE 610; email: anakano@usc.edu<br>
+<b>Lecture:</b> 12:00-1:50pm M W, DMC 202<br>
+<b>Office Hour:</b> 12:00-1:50pm F, VHE 610<br>
+<b>CARC (Center for Advanced Research Computing) Office Hour:</b>
+  <a href="https://www.carc.usc.edu/education-and-resources/office-hours">2:30-5:00 pm T</a><br>
+<b>Prerequisites:</b> (1) CSCI596 or basic experience in parallel computing; and 
+(2) PHYS 516 or basic knowledge of numerical methods in computational sciences.<br>
+<b>Textbooks:</b>
+None; all course materials are provided online on the course Web page. See also:<br>
+<a href="https://www.amazon.com/Electronic-Structure-Theory-Practical-Methods/dp/1108429904">
+Electronic structure, 2nd Ed.</a>, R. M. Martin (Cambridge Univ. Press, '20),<br>
+<a href="https://www.amazon.com/Ab-Initio-Molecular-Dynamics-Advanced/dp/0521898633">
+Ab initio molecular dynamics</a>, D. Marx & J. Hutter (Cambridge Univ. Press, '09),<br>
+<a href="https://www.amazon.com/Time-Dependent-Density-Functional-Theory-Concepts-Applications/dp/0199563020">
+Time-dependent density-functional theory</a>, C. A. Ullrich (Oxford Univ. Press, '12),<br>
+<a href="http://www.amazon.com/Effective-Computation-Physics-Anthony-Scopatz/dp/1491901535">
+Effective computation in physics</a>, A. Scopatz & K. D. Huff (O'Reilly, '15).<br>
+<p>
+
+<b> Course Description </b><br>
+
+Computer simulation of quantum-mechanical dynamics has become an essential enabling 
+technology for physical, chemical and biological sciences and engineering. 
+Quantum-dynamics simulations on extreme-scale parallel supercomputers would provide 
+unprecedented predictive power, but pose enormous challenges as well. 
+This course surveys and projects algorithmic and computing technologies that will make 
+quantum-dynamics simulations metascalable, i.e., "design once, continue to scale 
+on future computer architectures".
+<br><br>
+The course first covers how the exponential time complexity for solving 
+the quantum N-body problem is reduced to 
+(1) O(N<sup>3</sup>) within the density functional theory (DFT), for which Walter Kohn received a Nobel chemistry prize in 1998, and 
+(2) O(N) based on physical data-locality principles (e.g., Kohn's quantum nearsightedness principle). 
+The course then introduces key abstractions (e.g., pseudopotentials and exchange-correlation functionals) 
+and representation issues (e.g., plane-wave basis vs. real-space multigrids), 
+which are necessary for efficient implementation of quantum molecular dynamics (QMD) simulations. 
+This is followed by the design of QMD simulation algorithms on massively parallel supercomputers 
+using message passing and multithreading, including our metascalable divide-conquer-recombine (DCR) algorithmic framework, 
+as well as performance optimization on modern many-core processors 
+and accelerators through memory hierarchies and vectorization. 
+Advanced topics to be covered include 
+(1) DCR approaches to excitation dynamics, 
+(2) intersection of machine learning and quantum N-body problem, and 
+(3) merger of quantum Monte Carlo (QMC) and QMD methods. 
+The course ends with best software practices for co-developing extreme-scale QMD software for million-way parallelism.
+<br><br>
+Students will learn fundamental knowledge and gain hands-on experience in order to:
+(1) reduce the intractable quantum many-body problem to lower-complexity problems, while retaining the essential physics; 
+(2) design scalable parallel algorithms for linear-scaling quantum-dynamics simulations; 
+(3) develop metascalable quantum-dynamics software on current and future computer architectures.
+
+<p ALIGN="CENTER"><img SRC="angle-v6.png" WIDTH="700" HEIGHT="200"></p>
+<p ALIGN="CENTER">Nonadiabatic quantum molecular dynamics simulation
+to study photoexcitation dynamics in MoSe<sub>2</sub> bilayer
+[M.-F. Lin et al., <i>Nature Commun.</i> <b>8</b>, 1745 (2017)].</p>
+
+<h4>Announcements</h4>
+<ul>
+
+<li>	8/26 (M): Class begins.
+<li>	12/2 (M), 12/4 (W): Final project presentations.
+<li>	12/18 (W): Final project report due.
+
+</ul>
+
+</body>
+</html>
