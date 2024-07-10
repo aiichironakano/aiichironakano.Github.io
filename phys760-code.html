@@ -26,7 +26,7 @@
 
 <h4>Introduction</h4>
 
-QXMD is a Quantum Molecular Dynamics (QMD) simulation software with various eXtensions.
+QXMD is a quantum molecular dynamics (QMD) simulation software with various eXtensions.
 QMD follows the trajectories of all atoms while computing interatomic forces quantum mechanically
 in the framework of density functional theory (DFT) 
 [<a href="https://journals.aps.org/pr/abstract/10.1103/PhysRev.136.B864">P. Hohenberg & W. Kohn, <i>Phys. Rev.</i> <b>136</b>, B864 (1964)</a>;
@@ -57,47 +57,57 @@ and range-separated exact-exchange functional
 Various extensions included in the QXMD code are described in Ref. [2]:
 <ul>
 
-<li>	Linear-scaling DFT algorithms [3,4,5]
-<li>	Scalable algorithms on massively parallel computers [6,7]
-<li>	Nonadiabatic quantum molecular dynamics (NAQMD) to describe excitation dynamics [8]
-<li>	Omni-directional multiscale shock technique (OD-MSST) to study anisotropic shock response of materials [9]
+<li>	Linear-scaling DFT algorithms [3-5]
+<li>	Scalable algorithms on massively parallel computers [6-9]
+<li>	Nonadiabatic quantum molecular dynamics (NAQMD) to describe excitation dynamics [10]
+<li>	Omni-directional multiscale shock technique (OD-MSST) to study anisotropic shock response of materials [11]
 </ul>
 
 <h4>References</h4>
 
-1. "First-principles molecular-dynamics simulation of expanded liquid rubidium,"
-   F. Shimojo, Y. Zempo, K. Hoshino & M. Watabe,
-   <a href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.52.9320"><i> Phys. Rev. B</i>, <b>52</b>, 9320 (1995)</a><br>
-2. "A divide-conquer-recombine algorithmic paradigm for large spatiotemporal quantum molecular dynamics simulations,"
-   F. Shimojo, S. Hattori, R. K. Kalia, M. Kunaseth, W. Mou, A. Nakano, K. Nomura, S. Ohmura, P. Rajak, K. Shimamura & P. Vashishta
-   <a href="http://aip.scitation.org/doi/abs/10.1063/1.4869342?journalCode=jcp"><i>J. Chem. Phys.</i> <b>140</b>, 18A529 (2014)</a><br>
-3. "Linear-scaling density-functional-theory calculations of electronic structure based on real-space grids: design, analysis, and scalability test of parallel algorithms,"
-   F. Shimojo, R. K. Kalia, A. Nakano & P. Vashishta
-   <a href="https://www.sciencedirect.com/science/article/pii/S0010465501002478"><i>Comput. Phys. Commun.</i> <b>140</b>, 303 (2001)</a><br>
-4. "Embedded divide-and-conquer algorithm on hierarchical real-space grids: parallel molecular dynamics simulation based on linear-scaling density functional theory,"
-   F. Shimojo, R. K. Kalia, A. Nakano & P. Vashishta,
-   <a href="http://www.sciencedirect.com/science/article/pii/S0010465505000688"><i>Comput. Phys. Commun.</i> <b>167</b>, 151 (2005)</a><br>
-5. "Divide-and-conquer density functional theory on hierarchical real-space grids: parallel implementation and applications,"
-   F. Shimojo, R. K. Kalia, A. Nakano & P. Vashishta,
-   <a href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.77.085103"><i>Phys. Rev.</i> <b>B</b> 77, 085103 (2008)</a><br>
-6. "Scalable atomistic simulation algorithms for materials research,"
-   A. Nakano, R. K. Kalia, P. Vashishta, T. J. Campbell, S. Ogata, F. Shimojo & S. Saini
-   <a href="http://ieeexplore.ieee.org/document/1592786/"><i>Proc. Supercomputing, SC01</i> (ACM/IEEE, 2001)</a><br>
-7. "Metascalable quantum molecular dynamics simulations of hydrogen-on-demand,"
-   K. Nomura, R. K. Kalia, A. Nakano, P. Vashishta, K. Shimamura, F. Shimojo, M. Kunaseth, P. C. Messina& N. A. Romero
-   <a href="http://ieeexplore.ieee.org/document/7013041/"><i>Proc. Supercomputing, SC14</i> (IEEE/ACM, 2014)</a><br>
-8. "Large nonadiabatic quantum molecular dynamics simulations on parallel computer,"
-   F. Shimojo, S. Ohmura, W. Mou, R. K. Kalia, A. Nakano & P. Vashishta
-   <a href="https://www.sciencedirect.com/science/article/pii/S0010465512002548"><i>Comput. Phys. Commun.</i> <b>184</b>, 1 (2013)</a><br>
-9."Crystalline anisotropy of shock-induced phenomena: omni-directional multiscale shock technique,"
-   K. Shimamura, M. Misawa, S. Ohmura, F. Shimojo, R. K. Kalia, A. Nakano & P. Vashishta
-   <a href="http://aip.scitation.org/doi/abs/10.1063/1.4942191?journalCode=apl"><i>Appl. Phys. Lett.</i> <b>108</b>, 071901 (2016)</a><br>
+1.  "First-principles molecular-dynamics simulation of expanded liquid rubidium,"
+    F. Shimojo, Y. Zempo, K. Hoshino & M. Watabe,
+    <a href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.52.9320"><i> Phys. Rev. B</i>, <b>52</b>, 9320 (1995)</a><br>
+2.  "A divide-conquer-recombine algorithmic paradigm for large spatiotemporal quantum molecular dynamics simulations,"
+    F. Shimojo, S. Hattori, R. K. Kalia, M. Kunaseth, W. Mou, A. Nakano, K. Nomura, S. Ohmura, P. Rajak, K. Shimamura & P. Vashishta,
+    <a href="http://aip.scitation.org/doi/abs/10.1063/1.4869342?journalCode=jcp"><i>J. Chem. Phys.</i> <b>140</b>, 18A529 (2014)</a><br>
+3.  "Linear-scaling density-functional-theory calculations of electronic structure based on real-space grids: design, analysis, and scalability test of parallel algorithms,"
+    F. Shimojo, R. K. Kalia, A. Nakano & P. Vashishta,
+    <a href="https://www.sciencedirect.com/science/article/pii/S0010465501002478"><i>Comput. Phys. Commun.</i> <b>140</b>, 303 (2001)</a><br>
+4.  "Embedded divide-and-conquer algorithm on hierarchical real-space grids: parallel molecular dynamics simulation based on linear-scaling density functional theory,"
+    F. Shimojo, R. K. Kalia, A. Nakano & P. Vashishta,
+    <a href="http://www.sciencedirect.com/science/article/pii/S0010465505000688"><i>Comput. Phys. Commun.</i> <b>167</b>, 151 (2005)</a><br>
+5.  "Divide-and-conquer density functional theory on hierarchical real-space grids: parallel implementation and applications,"
+    F. Shimojo, R. K. Kalia, A. Nakano & P. Vashishta,
+    <a href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.77.085103"><i>Phys. Rev.</i> <b>B</b> 77, 085103 (2008)</a><br>
+6.  "Scalable atomistic simulation algorithms for materials research,"
+    A. Nakano, R. K. Kalia, P. Vashishta, T. J. Campbell, S. Ogata, F. Shimojo & S. Saini,
+    <a href="http://ieeexplore.ieee.org/document/1592786/"><i>Proc. Supercomputing, SC01</i> (ACM/IEEE, 2001)</a><br>
+7.  "Metascalable quantum molecular dynamics simulations of hydrogen-on-demand,"
+    K. Nomura, R. K. Kalia, A. Nakano, P. Vashishta, K. Shimamura, F. Shimojo, M. Kunaseth, P. C. Messina & N. A. Romero,
+    <a href="http://ieeexplore.ieee.org/document/7013041/"><i>Proc. Supercomputing, SC14</i> (IEEE/ACM, 2014)</a><br>
+8.  "Quantum dynamics at scale: ultrafast control of emergent functional materials,"
+    S. C. Tiwari, P. Sakdhnagool, R. K. Kalia, A. Krishnamoorthy, M. Kunaseth, A. Nakano, 
+    K. Nomura, P. Rajak, F. Shimojo, Y. Luo, & P. Vashishta,
+    <a href="https://dl.acm.org/doi/10.1145/3368474.3368489"><i>Proc. Int. Conf. High Perform. Comput. Asia-Pac. Reg., HPC Asia 2020</i>
+    (ACM, 2020)</a><br>
+9.  "Accelerating quantum light-matter dynamics on graphics processing units,"
+    T. M. Razakh, T. Linker, Y. Luo, R. K. Kalia, K. Nomura, P. Vashishta, & A. Nakano,
+    <a href="phys760/Razakh-DCMESH-PDSEC24.pdf"><i>Proc. Int. Worksh. Par. Distrib. Sci. Eng. Comput., PDSEC 2024</i>
+    (IEEE, 2024)</a><br>
+10. "Large nonadiabatic quantum molecular dynamics simulations on parallel computer,"
+    F. Shimojo, S. Ohmura, W. Mou, R. K. Kalia, A. Nakano & P. Vashishta
+    <a href="https://www.sciencedirect.com/science/article/pii/S0010465512002548"><i>Comput. Phys. Commun.</i> <b>184</b>, 1 (2013)</a><br>
+11. "Crystalline anisotropy of shock-induced phenomena: omni-directional multiscale shock technique,"
+    K. Shimamura, M. Misawa, S. Ohmura, F. Shimojo, R. K. Kalia, A. Nakano & P. Vashishta
+    <a href="http://aip.scitation.org/doi/abs/10.1063/1.4942191?journalCode=apl"><i>Appl. Phys. Lett.</i> <b>108</b>, 071901 (2016)</a><br>
 
 <h4>Software</h4>
 
 <ul>
 
 <li>	<a href="https://github.com/USCCACS/QXMD_Course">QXMD-course GitHub repository</a>
+<li>	<a href="https://usccacs.github.io/QXMD/index.html">QXMD manual</a>
 <li>	<a href="https://magics.usc.edu/qxmd/">MAGICS QXMD software site</a>
 
 </ul>
