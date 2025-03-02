@@ -29,10 +29,10 @@ circ.draw('mpl')
 
 # Use Aer simulator
 backend = AerSimulator()
-# Transpile the quantum circuit to low-level QASM instructions
+# Transpile the quantum circuit to low-level instructions
 from qiskit import transpile
 circ_compiled = transpile(circ, backend)
-# Execute the circuit on the Qasm simulator, repeating 1024 times
+# Execute the circuit on the simulator, repeating 1024 times
 job_sim = backend.run(circ_compiled, shots=1024)
 # Grab the results from the job
 result_sim = job_sim.result()
