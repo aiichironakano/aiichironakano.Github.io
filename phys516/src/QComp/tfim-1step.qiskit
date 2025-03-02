@@ -6,7 +6,6 @@ import numpy as np
 from qiskit import QuantumCircuit
 from qiskit_aer import AerSimulator
 from qiskit.visualization import *
-from ibm_quantum_widgets import *
 
 ### Physical parameters (atomic units) ###
 J = 1.0    # Exchange coupling
