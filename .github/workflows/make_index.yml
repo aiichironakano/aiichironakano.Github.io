@@ -23,7 +23,7 @@ jobs:
     - name: Set up Ruby
       uses: ruby/setup-ruby@v1
       with:
-        ruby-version: 2.7
+        ruby-version: '3.4.8'
         bundler-cache: true # runs 'bundle install' and caches installed gems automatically
     - name: Run indexing script
       run: bundle exec ruby scripts/make_index.rb
