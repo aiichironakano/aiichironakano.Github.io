@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <omp.h>
-#define NBIN 100000
+#define NBIN 100000000
 
 int main() {
 	double step,sum=0.0,pi;
